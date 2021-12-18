@@ -1,0 +1,79 @@
+/* ./src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("http://fonts.cdnfonts.com/css/ocr-a-std");
+body {
+  scroll-behavior: smooth;
+}
+details {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.bar {
+  position: relative;
+
+  border: 2px;
+
+  border-radius: 20px;
+}
+.bar div {
+  position: relative;
+  width: 0;
+  height: 9px;
+  border-radius: 10px;
+}
+.skills:not(:last-child) {
+  margin-bottom: 30px;
+}
+#css-bar {
+  animation: css-fill 2s forwards;
+}
+@keyframes css-fill {
+  100% {
+    width: 80%;
+  }
+}
+#javascript-bar {
+  animation: js-fill 2s forwards;
+}
+@keyframes js-fill {
+  100% {
+    width: 70%;
+  }
+}
+#jQuery-bar {
+  animation: jQuery-fill 2s forwards;
+}
+@keyframes jQuery-fill {
+  100% {
+    width: 42%;
+  }
+}
+.progress {
+  background-color: #d8d8d8;
+
+  position: relative;
+  margin: 15px 0;
+  height: 30px;
+  width: 360px;
+}
+
+.progress-done {
+  background: linear-gradient(to left, #54bb54, #03c513);
+
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 0;
+  opacity: 0;
+  transition: 1s ease 0.3s;
+}
+button:disabled:hover:active {
+  cursor: not-allowed;
+}
